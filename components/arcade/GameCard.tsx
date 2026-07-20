@@ -133,7 +133,7 @@ export default function GameCard({ game }: GameCardProps) {
         >
           {/* Game Preview */}
           <div
-            className="aspect-[16/10] relative overflow-hidden"
+            className="aspect-16/10 relative overflow-hidden"
             style={{
               background: `linear-gradient(135deg, ${game.color}15, transparent)`,
             }}

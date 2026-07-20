@@ -19,7 +19,7 @@ export default function GameGrid() {
 
   return (
     <section id="games" className="relative z-10 py-20 sm:py-32 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12 gap-4">
           <div>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-black tracking-tighter mb-2">

@@ -23,7 +23,7 @@ export default function DashboardLayout({
     <main className="min-h-screen bg-black text-white">
       <Navbar />
       <div className="pt-24 sm:pt-28 pb-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">{children}</div>
+        <div className="">{children}</div>
       </div>
       <Footer />
     </main>
