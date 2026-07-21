@@ -84,15 +84,6 @@ async function seedDatabase() {
 
     await Score.create(scoresData);
     console.log(`✅ Created ${scoresData.length} scores`);
-
-    console.log("
-🎉 Database seeded successfully!");
-    console.log("
-Demo Accounts:");
-    console.log("  Username: NeonKing, Password: password123");
-    console.log("  Username: PixelPro, Password: password123");
-    console.log("  Username: CubeMaster, Password: password123");
-
     process.exit(0);
   } catch (error) {
     console.error("❌ Seeding failed:", error);

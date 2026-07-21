@@ -22,8 +22,8 @@ export default function StatsGrid({ user }: Props) {
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
       {stats.map((stat) => (
-        <div key={stat.label} className="glass-card rounded-2xl p-5 hover:bg-white/[0.04] transition-all group">
-          <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${stat.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
+        <div key={stat.label} className="glass-card rounded-2xl p-5 hover:bg-white/0.04 transition-all group">
+          <div className={`w-10 h-10 rounded-xl bg-linear-to-br ${stat.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
             <stat.icon className={`w-5 h-5 ${stat.iconColor}`} />
           </div>
           <div className="text-2xl font-bold text-white">{stat.value}{stat.suffix || ""}</div>

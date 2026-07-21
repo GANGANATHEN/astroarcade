@@ -44,7 +44,7 @@ export default function FeaturedBanner() {
               </Link>
             </div>
             <div className="w-full max-w-sm lg:max-w-md">
-              <div className="aspect-video rounded-2xl bg-gradient-to-br from-cyan/20 to-purple/20 flex items-center justify-center border border-white/10">
+              <div className="aspect-video rounded-2xl bg-linear-to-br from-cyan/20 to-purple/20 flex items-center justify-center border border-white/10">
                 <span className="text-8xl sm:text-9xl">🚀</span>
               </div>
             </div>

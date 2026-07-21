@@ -9,8 +9,6 @@ async function testDatabase() {
     console.log("✅ Connected to MongoDB!");
 
     // Test User creation
-    console.log("
-👤 Testing User creation...");
     const testUser = await User.create({
       username: "testplayer",
       email: "test@astroarcade.com",
@@ -21,8 +19,6 @@ async function testDatabase() {
     console.log("✅ User created:", testUser.username);
 
     // Test Score creation
-    console.log("
-🏆 Testing Score creation...");
     const testScore = await Score.create({
       userId: testUser._id,
       username: testUser.username,
@@ -33,8 +29,7 @@ async function testDatabase() {
     console.log("✅ Score created:", testScore.score);
 
     // Test Leaderboard query
-    console.log("
-📊 Testing Leaderboard query...");
+    console.log("📊 Testing Leaderboard query...");
     const leaderboard = await Score.aggregate([
       {
         $group: {
@@ -49,14 +44,12 @@ async function testDatabase() {
     console.log("✅ Leaderboard:", leaderboard);
 
     // Cleanup
-    console.log("
-🧹 Cleaning up test data...");
+    console.log("🧹 Cleaning up test data...");
     await User.deleteOne({ _id: testUser._id });
     await Score.deleteOne({ _id: testScore._id });
     console.log("✅ Test data cleaned!");
 
-    console.log("
-🎉 All tests passed! Database is working correctly.");
+    console.log("🎉 All tests passed! Database is working correctly.");
     process.exit(0);
   } catch (error) {
     console.error("❌ Test failed:", error);

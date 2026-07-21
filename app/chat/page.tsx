@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react";
 import Navbar from "@/components/ui/navbar/Navbar";
-import Footer from "@/components/ui/Footer";
 import { Send, Users, Hash, Globe, Gamepad2 } from "lucide-react";
 
 interface Message {
@@ -96,7 +95,7 @@ export default function ChatPage() {
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
             {messages.filter((m) => m.room === activeRoom).map((msg) => (
               <div key={msg.id} className="flex gap-3">
-                <div className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-lg flex-shrink-0">
+                <div className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-lg shrink-0">
                   {msg.avatar}
                 </div>
                 <div className="flex-1 min-w-0">
@@ -104,7 +103,7 @@ export default function ChatPage() {
                     <span className="font-bold text-white text-sm">{msg.username}</span>
                     <span className="text-xs text-gray-600">{msg.timestamp}</span>
                   </div>
-                  <p className="text-sm text-gray-300 break-words">{msg.message}</p>
+                  <p className="text-sm text-gray-300 wrap-break-word">{msg.message}</p>
                 </div>
               </div>
             ))}
