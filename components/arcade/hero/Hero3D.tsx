@@ -65,8 +65,7 @@ export default function Hero3D() {
         </h1>
 
         {/* Description */}
-        <p
-          className={`text-sm sm:text-base md:text-lg text-gray-400 max-w-xl sm:max-w-2xl mb-6 sm:mb-8 px-4 transition-all duration-1000 delay-300 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        <p className={`text-sm sm:text-base md:text-lg text-gray-400 max-w-xl sm:max-w-2xl mb-6 sm:mb-8 px-4 transition-all duration-1000 delay-300 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           Dive into immersive 3D browser games. Play solo or challenge friends
           in multiplayer battles. No downloads needed — just pure gaming fun.

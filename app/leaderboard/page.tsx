@@ -36,7 +36,7 @@ export default function LeaderboardPage() {
     if (rank === 1) return "bg-yellow/10 border-yellow/30 text-yellow";
     if (rank === 2) return "bg-gray-400/10 border-gray-400/30 text-gray-300";
     if (rank === 3) return "bg-amber-700/10 border-amber-700/30 text-amber-600";
-    return "bg-white/[0.02] border-white/5 text-gray-500";
+    return "bg-white/2 border-white/5 text-gray-500";
   };
 
   return (
