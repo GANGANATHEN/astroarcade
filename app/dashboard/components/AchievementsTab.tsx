@@ -25,7 +25,7 @@ export default function AchievementsTab() {
           <span className="text-sm text-gray-400">{unlocked}/{total} Unlocked</span>
         </div>
         <div className="h-3 rounded-full bg-white/10 overflow-hidden">
-          <div className="h-full rounded-full bg-gradient-to-r from-cyan to-pink transition-all" style={{ width: `${(unlocked/total)*100}%` }} />
+          <div className="h-full rounded-full bg-linear-to-r from-cyan to-pink transition-all" style={{ width: `${(unlocked/total)*100}%` }} />
         </div>
       </div>
 

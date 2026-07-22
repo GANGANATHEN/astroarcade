@@ -74,14 +74,14 @@ export default function AppearanceSection() {
           { key: "animations", label: "Animations", desc: "Enable UI animations" },
           { key: "compactMode", label: "Compact Mode", desc: "Reduce spacing for more content" },
         ].map((item) => (
-          <div key={item.key} className="flex items-center justify-between p-3 sm:p-4 rounded-xl bg-white/[0.02]">
+          <div key={item.key} className="flex items-center justify-between p-3 sm:p-4 rounded-xl bg-white/2">
             <div>
               <div className="text-sm text-white font-medium">{item.label}</div>
               <div className="text-xs text-gray-500">{item.desc}</div>
             </div>
             <button
               onClick={() => setAppearance({...appearance, [item.key]: !appearance[item.key as keyof typeof appearance]})}
-              className={`w-12 h-6 rounded-full transition-all relative flex-shrink-0 ${
+              className={`w-12 h-6 rounded-full transition-all relative shrink-0 ${
                 appearance[item.key as keyof typeof appearance] ? 'bg-cyan' : 'bg-white/10'
               }`}
             >

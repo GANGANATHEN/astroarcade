@@ -36,7 +36,7 @@ export default function SessionsSection() {
               session.current ? 'border-cyan/30' : ''
             }`}
           >
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/5 flex items-center justify-center flex-shrink-0">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/5 flex items-center justify-center shrink-0">
               {session.device.includes("iPhone") || session.device.includes("Android") ? (
                 <Smartphone className="w-5 h-5 sm:w-6 sm:h-6 text-gray-400" />
               ) : (
@@ -47,7 +47,7 @@ export default function SessionsSection() {
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="text-sm font-medium text-white truncate">{session.device}</span>
                 {session.current && (
-                  <span className="px-2 py-0.5 rounded-full bg-cyan/20 text-cyan text-[10px] font-bold flex-shrink-0">CURRENT</span>
+                  <span className="px-2 py-0.5 rounded-full bg-cyan/20 text-cyan text-[10px] font-bold shrink-0">CURRENT</span>
                 )}
               </div>
               <div className="text-xs text-gray-500 mt-0.5">{session.location} • {session.lastActive}</div>
@@ -55,7 +55,7 @@ export default function SessionsSection() {
             {!session.current && (
               <button
                 onClick={() => handleLogoutDevice(session.id)}
-                className="p-2 rounded-lg hover:bg-red/10 text-gray-400 hover:text-red-400 transition-colors flex-shrink-0"
+                className="p-2 rounded-lg hover:bg-red/10 text-gray-400 hover:text-red-400 transition-colors shrink-0"
               >
                 <LogOut className="w-4 h-4" />
               </button>

@@ -65,7 +65,7 @@ export default function AccountSection() {
           </div>
           <button
             onClick={() => setAccount({...account, twoFactor: !account.twoFactor})}
-            className={`w-12 h-6 rounded-full transition-all relative flex-shrink-0 ${
+            className={`w-12 h-6 rounded-full transition-all relative shrink-0 ${
               account.twoFactor ? 'bg-cyan' : 'bg-white/10'
             }`}
           >

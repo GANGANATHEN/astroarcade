@@ -101,7 +101,7 @@ export default function ParticleEffect() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 z-[1] pointer-events-none"
+      className="absolute inset-0 z-1 pointer-events-none"
       style={{ opacity: 0.6 }}
     />
   );

@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan to-pink-500 flex items-center justify-center">
+              <div className="w-9 h-9 rounded-lg bg-linear-to-br from-cyan to-pink-500 flex items-center justify-center">
                 <Gamepad2 className="w-4 h-4 text-white" />
               </div>
               <span className="text-lg font-display font-bold">

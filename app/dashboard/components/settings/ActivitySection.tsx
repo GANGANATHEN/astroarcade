@@ -29,13 +29,13 @@ export default function ActivitySection() {
 
       <div className="space-y-2 sm:space-y-3">
         {activities.map((activity, i) => (
-          <div key={i} className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-white/[0.02]">
-            <div className={`w-2 h-2 rounded-full flex-shrink-0 ${typeColors[activity.type] || 'bg-gray'}`} />
+          <div key={i} className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-white/2">
+            <div className={`w-2 h-2 rounded-full shrink-0 ${typeColors[activity.type] || 'bg-gray'}`} />
             <div className="flex-1 min-w-0">
               <div className="text-sm text-white truncate">{activity.action}</div>
               <div className="text-xs text-gray-500">{activity.time}</div>
             </div>
-            <span className={`text-[10px] uppercase px-2 py-0.5 rounded-full bg-white/5 text-gray-400 flex-shrink-0 hidden sm:block`}>
+            <span className={`text-[10px] uppercase px-2 py-0.5 rounded-full bg-white/5 text-gray-400 shrink-0 hidden sm:block`}>
               {activity.type}
             </span>
           </div>

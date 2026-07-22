@@ -97,7 +97,7 @@ export default function LeaderboardPage() {
           {/* Full List */}
           <div className="space-y-2">
             {filtered.map((player) => (
-              <div key={player.rank} className={`flex items-center gap-4 p-4 rounded-xl border transition-all hover:bg-white/[0.04] ${getRankStyle(player.rank)}`}>
+              <div key={player.rank} className={`flex items-center gap-4 p-4 rounded-xl border transition-all hover:bg-white/4 ${getRankStyle(player.rank)}`}>
                 <div className="w-8 text-center font-bold">
                   {player.rank <= 3 ? (
                     player.rank === 1 ? <Crown className="w-5 h-5 text-yellow mx-auto" /> :

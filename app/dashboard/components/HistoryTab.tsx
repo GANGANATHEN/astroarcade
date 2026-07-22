@@ -40,7 +40,8 @@ export default function HistoryTab() {
 
       <div className="space-y-3">
         {filtered.map((game) => (
-          <div key={game.id} className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
+          <div key={game.id} className="flex items-center gap-4 p-4 rounded-xl bg-white/2
+           hover:bg-white/4 transition-colors">
             <span className="text-3xl">{game.icon}</span>
             <div className="flex-1">
               <div className="text-sm font-medium text-white">{game.game}</div>

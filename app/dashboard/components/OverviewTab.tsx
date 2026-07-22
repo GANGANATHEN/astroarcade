@@ -28,7 +28,8 @@ export default function OverviewTab({ user }: Props) {
         </div>
         <div className="space-y-3">
           {recentGames.map((game, i) => (
-            <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
+            <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-white/2
+             hover:bg-white/4 transition-colors">
               <span className="text-2xl">{game.icon}</span>
               <div className="flex-1">
                 <div className="text-sm text-white">{game.name}</div>
@@ -55,7 +56,7 @@ export default function OverviewTab({ user }: Props) {
               <span className="text-white font-bold">68%</span>
             </div>
             <div className="h-2 rounded-full bg-white/10 overflow-hidden">
-              <div className="h-full rounded-full bg-gradient-to-r from-cyan to-pink" style={{ width: '68%' }} />
+              <div className="h-full rounded-full bg-linear-to-r from-cyan to-pink" style={{ width: '68%' }} />
             </div>
           </div>
           <div>
@@ -64,7 +65,7 @@ export default function OverviewTab({ user }: Props) {
               <span className="text-white font-bold">82%</span>
             </div>
             <div className="h-2 rounded-full bg-white/10 overflow-hidden">
-              <div className="h-full rounded-full bg-gradient-to-r from-green to-cyan" style={{ width: '82%' }} />
+              <div className="h-full rounded-full bg-linear-to-r from-green to-cyan" style={{ width: '82%' }} />
             </div>
           </div>
           <div>
@@ -73,7 +74,7 @@ export default function OverviewTab({ user }: Props) {
               <span className="text-white font-bold">245ms</span>
             </div>
             <div className="h-2 rounded-full bg-white/10 overflow-hidden">
-              <div className="h-full rounded-full bg-gradient-to-r from-yellow to-orange" style={{ width: '75%' }} />
+              <div className="h-full rounded-full bg-linear-to-r from-yellow to-orange" style={{ width: '75%' }} />
             </div>
           </div>
         </div>
@@ -93,7 +94,8 @@ export default function OverviewTab({ user }: Props) {
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {(user.favoriteGames || []).slice(0, 4).map((gameId: string) => (
-              <Link key={gameId} href={`/games/${gameId}`} className="p-4 rounded-xl bg-white/[0.02] hover:bg-white/[0.04] transition-colors text-center">
+              <Link key={gameId} href={`/games/${gameId}`} className="p-4 rounded-xl 
+              bg-white/2 hover:bg-white/4 transition-colors text-center">
                 <span className="text-3xl mb-2 block">🎮</span>
                 <span className="text-sm text-white capitalize">{gameId.replace("-", " ")}</span>
               </Link>

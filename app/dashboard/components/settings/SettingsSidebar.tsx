@@ -25,7 +25,7 @@ export default function SettingsSidebar() {
   const currentTab = searchParams.get("tab") || "profile";
 
   return (
-    <div className="w-full lg:w-72 flex-shrink-0">
+    <div className="w-full lg:w-72 shrink-0">
       <div className="glass-card rounded-2xl p-3 lg:p-4 sticky top-24 lg:top-28">
         <h2 className="text-base lg:text-lg font-bold text-white mb-0.5 px-2 lg:px-3">Settings</h2>
         <p className="text-[10px] lg:text-xs text-gray-500 mb-3 lg:mb-4 px-2 lg:px-3">Manage your account</p>
@@ -37,7 +37,7 @@ export default function SettingsSidebar() {
               <Link
                 key={section.id}
                 href={`/dashboard/settings?tab=${section.id}`}
-                className={`flex items-center gap-2 lg:gap-3 px-2 lg:px-3 py-2 lg:py-2.5 rounded-xl transition-all group whitespace-nowrap flex-shrink-0 ${
+                className={`flex items-center gap-2 lg:gap-3 px-2 lg:px-3 py-2 lg:py-2.5 rounded-xl transition-all group whitespace-nowrap shrink-0 ${
                   isActive 
                     ? "bg-white/10 text-white" 
                     : "text-gray-400 hover:bg-white/5 hover:text-white"

@@ -22,10 +22,10 @@ export default function ProfileHeader({ user, onLogout }: Props) {
       <div className="relative flex flex-col sm:flex-row items-center gap-6">
         {/* Avatar */}
         <div className="relative">
-          <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-br from-cyan/20 to-pink/20 flex items-center justify-center text-5xl border border-white/10">
+          <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-linear-to-br from-cyan/20 to-pink/20 flex items-center justify-center text-5xl border border-white/10">
             {user.avatar || initial}
           </div>
-          <div className="absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-gradient-to-r from-cyan to-pink flex items-center justify-center text-sm font-bold text-black border-2 border-black">
+          <div className="absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-linear-to-r from-cyan to-pink flex items-center justify-center text-sm font-bold text-black border-2 border-black">
             {level}
           </div>
         </div>
@@ -44,7 +44,7 @@ export default function ProfileHeader({ user, onLogout }: Props) {
               <span>{xpPercent}/100 XP</span>
             </div>
             <div className="h-2 rounded-full bg-white/10 overflow-hidden">
-              <div className="h-full rounded-full bg-gradient-to-r from-cyan to-pink transition-all" style={{ width: `${xpPercent}%` }} />
+              <div className="h-full rounded-full bg-linear-to-r from-cyan to-pink transition-all" style={{ width: `${xpPercent}%` }} />
             </div>
           </div>
           

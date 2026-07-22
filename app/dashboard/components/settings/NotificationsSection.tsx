@@ -31,14 +31,14 @@ export default function NotificationsSection() {
 
       <div className="space-y-2 sm:space-y-3">
         {notificationItems.map((item) => (
-          <div key={item.key} className="flex items-center justify-between p-3 sm:p-4 rounded-xl bg-white/[0.02]">
+          <div key={item.key} className="flex items-center justify-between p-3 sm:p-4 rounded-xl bg-white/2">
             <div className="pr-4">
               <div className="text-sm text-white font-medium">{item.label}</div>
               <div className="text-xs text-gray-500">{item.desc}</div>
             </div>
             <button
               onClick={() => setNotifications({...notifications, [item.key]: !notifications[item.key as keyof typeof notifications]})}
-              className={`w-12 h-6 rounded-full transition-all relative flex-shrink-0 ${
+              className={`w-12 h-6 rounded-full transition-all relative shrink-0 ${
                 notifications[item.key as keyof typeof notifications] ? 'bg-cyan' : 'bg-white/10'
               }`}
             >

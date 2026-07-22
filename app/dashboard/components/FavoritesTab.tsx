@@ -23,7 +23,7 @@ export default function FavoritesTab({ user }: Props) {
         <Heart className="w-12 h-12 text-gray-600 mx-auto mb-4" />
         <h3 className="text-lg font-bold text-white mb-2">No Favorites Yet</h3>
         <p className="text-gray-500 text-sm mb-4">Start exploring and favorite your best games!</p>
-        <Link href="/#games" className="inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-cyan to-pink rounded-full text-black font-bold text-sm hover:opacity-90 transition-opacity">
+        <Link href="/#games" className="inline-flex items-center gap-2 px-6 py-2.5 bg-linear-to-r from-cyan to-pink rounded-full text-black font-bold text-sm hover:opacity-90 transition-opacity">
           <Gamepad2 className="w-4 h-4" />
           Browse Games
         </Link>
@@ -34,7 +34,7 @@ export default function FavoritesTab({ user }: Props) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {favorites.map((game) => (
-        <Link key={game.id} href={`/games/${game.id}`} className="glass-card rounded-2xl p-5 hover:bg-white/[0.04] transition-all group">
+        <Link key={game.id} href={`/games/${game.id}`} className="glass-card rounded-2xl p-5 hover:bg-white/4 transition-all group">
           <div className="flex items-start justify-between mb-4">
             <span className="text-4xl">{game.icon}</span>
             <ExternalLink className="w-4 h-4 text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity" />

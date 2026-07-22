@@ -33,15 +33,15 @@ export default function LanguageSection() {
             key={lang.id}
             onClick={() => setSelected(lang.id)}
             className={`flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl border transition-all text-left ${
-              selected === lang.id ? 'border-cyan bg-cyan/5' : 'border-white/10 hover:border-white/20 hover:bg-white/[0.02]'
+              selected === lang.id ? 'border-cyan bg-cyan/5' : 'border-white/10 hover:border-white/20 hover:bg-white/2'
             }`}
           >
-            <span className="text-xl sm:text-2xl flex-shrink-0">{lang.flag}</span>
+            <span className="text-xl sm:text-2xl shrink-0">{lang.flag}</span>
             <div className="flex-1 min-w-0">
               <div className="text-sm text-white font-medium">{lang.label}</div>
               <div className="text-xs text-gray-500">{lang.region}</div>
             </div>
-            {selected === lang.id && <Check className="w-4 h-4 text-cyan flex-shrink-0" />}
+            {selected === lang.id && <Check className="w-4 h-4 text-cyan shrink-0" />}
           </button>
         ))}
       </div>

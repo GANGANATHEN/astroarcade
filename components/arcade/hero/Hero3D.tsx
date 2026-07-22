@@ -55,7 +55,7 @@ export default function Hero3D() {
           className={`transition-all duration-1000 delay-150 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
         >
           <span className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter block mb-1 sm:mb-2">
-            <span className="bg-gradient-to-r from-cyan via-blue-400 to-pink bg-clip-text text-transparent animate-gradient">
+            <span className="bg-linear-to-r from-cyan via-blue-400 to-pink bg-clip-text text-transparent animate-gradient">
               ASTRO
             </span>
           </span>
@@ -78,7 +78,7 @@ export default function Hero3D() {
         >
           <Link
             href="/#games"
-            className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-cyan to-pink-500 rounded-full font-bold text-black text-sm sm:text-base flex items-center justify-center gap-2 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,240,255,0.3)] transition-all duration-300"
+            className="group px-6 sm:px-8 py-3 sm:py-4 bg-linear-to-r from-cyan to-pink-500 rounded-full font-bold text-black text-sm sm:text-base flex items-center justify-center gap-2 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,240,255,0.3)] transition-all duration-300"
           >
             <Play className="w-4 h-4 sm:w-5 sm:h-5" />
             Start Playing
@@ -100,7 +100,7 @@ export default function Hero3D() {
       <ScrollIndicator />
 
       {/* Bottom Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 bg-linear-to-t from-black to-transparent z-10 pointer-events-none" />
 
       {/* Side Glows */}
       <div className="absolute top-1/4 left-0 w-64 h-64 bg-cyan/10 rounded-full blur-[100px] pointer-events-none" />

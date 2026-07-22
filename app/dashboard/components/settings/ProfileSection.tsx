@@ -98,7 +98,7 @@ export default function ProfileSection({ user }: Props) {
         {saved && <span className="text-sm text-green">✓ Saved!</span>}
         <button 
           onClick={handleSave}
-          className="ml-auto flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan to-pink rounded-xl text-black font-bold text-sm hover:opacity-90 transition-opacity"
+          className="ml-auto flex items-center gap-2 px-6 py-3 bg-linear-to-r from-cyan to-pink rounded-xl text-black font-bold text-sm hover:opacity-90 transition-opacity"
         >
           <Save className="w-4 h-4" />
           Save Changes

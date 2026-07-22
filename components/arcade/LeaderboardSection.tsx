@@ -48,11 +48,11 @@ export default function LeaderboardSection() {
           {mockLeaderboard.map((player) => (
             <div
               key={player.rank}
-              className={`flex items-center gap-4 p-4 sm:p-5 rounded-2xl border transition-all hover:bg-white/[0.04] ${
+              className={`flex items-center gap-4 p-4 sm:p-5 rounded-2xl border transition-all hover:bg-white/4 ${
                 player.rank === 1 ? "bg-yellow/5 border-yellow/20" :
                 player.rank === 2 ? "bg-gray-500/5 border-gray-500/20" :
                 player.rank === 3 ? "bg-amber-600/5 border-amber-600/20" :
-                "bg-white/[0.02] border-white/5"
+                "bg-white/2 border-white/5"
               }`}
             >
               <div className="flex items-center justify-center w-8">

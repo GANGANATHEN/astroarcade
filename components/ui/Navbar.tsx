@@ -86,13 +86,13 @@ export default function Navbar() {
                 <Link
                   href="/dashboard"
                   className="flex items-center gap-3 px-4 py-3 rounded-2xl 
-             bg-gradient-to-r from-white/5 to-transparent
+             bg-linear-to-r from-white/5 to-transparent
              hover:from-white/10 hover:to-white/5
              border border-white/5 hover:border-cyan/20
              transition-all duration-300 group"
                 >
                   <div className="relative">
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan to-pink opacity-0 group-hover:opacity-100 blur-sm transition-opacity" />
+                    <div className="absolute inset-0 rounded-full bg-linear-to-r from-cyan to-pink opacity-0 group-hover:opacity-100 blur-sm transition-opacity" />
                     <div className="relative w-10 h-10 rounded-full bg-[#0a0a1a] flex items-center justify-center ring-2 ring-white/10">
                       {user.avatar ? (
                         <img
@@ -116,7 +116,7 @@ export default function Navbar() {
                     <div className="flex items-center gap-1.5">
                       <div className="w-12 h-1 rounded-full bg-white/10 overflow-hidden">
                         <div
-                          className="h-full rounded-full bg-gradient-to-r from-cyan to-pink"
+                          className="h-full rounded-full bg-linear-to-r from-cyan to-pink"
                           style={{
                             width: `${Math.min(user.totalScore % 100, 100)}%`,
                           }}
