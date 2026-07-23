@@ -13,6 +13,7 @@ const notificationItems = [
 ];
 
 export default function NotificationsSection() {
+  
   const [notifications, setNotifications] = useState({
     push: true,
     email: true,

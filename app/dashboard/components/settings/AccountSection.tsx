@@ -30,48 +30,108 @@ export default function AccountSection() {
           <Key className="w-4 h-4 text-cyan" />
           Change Password
         </h4>
-        
+
         {[
-          { key: "currentPassword", label: "Current Password", show: showPasswords.current, setShow: () => setShowPasswords({...showPasswords, current: !showPasswords.current}) },
-          { key: "newPassword", label: "New Password", show: showPasswords.new, setShow: () => setShowPasswords({...showPasswords, new: !showPasswords.new}) },
-          { key: "confirmPassword", label: "Confirm New Password", show: showPasswords.confirm, setShow: () => setShowPasswords({...showPasswords, confirm: !showPasswords.confirm}) },
+          {
+            key: "currentPassword",
+            label: "Current Password",
+            show: showPasswords.current,
+            setShow: () =>
+              setShowPasswords({
+                ...showPasswords,
+                current: !showPasswords.current,
+              }),
+          },
+          {
+            key: "newPassword",
+            label: "New Password",
+            show: showPasswords.new,
+            setShow: () =>
+              setShowPasswords({
+                ...showPasswords,
+                new: !showPasswords.new,
+              }),
+          },
+          {
+            key: "confirmPassword",
+            label: "Confirm New Password",
+            show: showPasswords.confirm,
+            setShow: () =>
+              setShowPasswords({
+                ...showPasswords,
+                confirm: !showPasswords.confirm,
+              }),
+          },
         ].map((field) => (
           <div key={field.key}>
-            <label className="text-sm text-gray-400 mb-2 block">{field.label}</label>
+            <label className="text-sm text-gray-400 mb-2 block">
+              {field.label}
+            </label>
+
             <div className="relative">
-              <input 
+              <input
                 type={field.show ? "text" : "password"}
                 value={account[field.key as keyof typeof account] as string}
-                onChange={(e) => setAccount({...account, [field.key]: e.target.value})}
+                onChange={(e) =>
+                  setAccount({
+                    ...account,
+                    [field.key]: e.target.value,
+                  })
+                }
                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 pr-12 text-white text-sm focus:outline-none focus:border-cyan/50 transition-colors"
               />
-              <button 
+
+              <button
+                type="button"
                 onClick={field.setShow}
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors"
               >
-                {field.show ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                {field.show ? (
+                  <EyeOff className="w-4 h-4" />
+                ) : (
+                  <Eye className="w-4 h-4" />
+                )}
               </button>
             </div>
           </div>
         ))}
+
+        {/* Save Button */}
+        <div className="pt-2 flex justify-end">
+          <button
+            type="button"
+            className="inline-flex items-center gap-2 rounded-xl bg-cyan px-5 py-3 text-sm font-semibold text-black transition-all duration-300 hover:scale-105 hover:bg-cyan/90"
+          >
+            <Save className="w-4 h-4" />
+            Save Changes
+          </button>
+        </div>
       </div>
 
       {/* 2FA */}
       <div className="glass-card rounded-2xl p-4 sm:p-6">
         <div className="flex items-center justify-between">
           <div>
-            <h4 className="text-sm font-bold text-white">Two-Factor Authentication</h4>
-            <p className="text-xs text-gray-500 mt-1">Add extra security layer</p>
+            <h4 className="text-sm font-bold text-white">
+              Two-Factor Authentication
+            </h4>
+            <p className="text-xs text-gray-500 mt-1">
+              Add extra security layer
+            </p>
           </div>
           <button
-            onClick={() => setAccount({...account, twoFactor: !account.twoFactor})}
+            onClick={() =>
+              setAccount({ ...account, twoFactor: !account.twoFactor })
+            }
             className={`w-12 h-6 rounded-full transition-all relative shrink-0 ${
-              account.twoFactor ? 'bg-cyan' : 'bg-white/10'
+              account.twoFactor ? "bg-cyan" : "bg-white/10"
             }`}
           >
-            <div className={`absolute top-0.5 w-5 h-5 rounded-full bg-white transition-all ${
-              account.twoFactor ? 'left-6' : 'left-0.5'
-            }`} />
+            <div
+              className={`absolute top-0.5 w-5 h-5 rounded-full bg-white transition-all ${
+                account.twoFactor ? "left-6" : "left-0.5"
+              }`}
+            />
           </button>
         </div>
       </div>
@@ -82,7 +142,9 @@ export default function AccountSection() {
           <AlertTriangle className="w-4 h-4" />
           Danger Zone
         </h4>
-        <p className="text-xs text-gray-500 mb-4">Once deleted, account cannot be recovered</p>
+        <p className="text-xs text-gray-500 mb-4">
+          Once deleted, account cannot be recovered
+        </p>
         <button className="px-4 py-2 rounded-xl bg-red/10 text-red-400 text-sm font-medium hover:bg-red/20 transition-colors flex items-center gap-2">
           <Trash2 className="w-4 h-4" />
           Delete Account
