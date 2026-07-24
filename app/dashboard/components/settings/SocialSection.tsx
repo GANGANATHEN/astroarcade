@@ -1,6 +1,5 @@
 // app/dashboard/components/settings/SocialSection.tsx
 "use client";
-
 import { Users, UserX, UserPlus } from "lucide-react";
 
 export default function SocialSection() {

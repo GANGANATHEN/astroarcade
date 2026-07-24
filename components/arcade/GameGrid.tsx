@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect, useRef } from "react";
 import { games, categories } from "@/lib/games";
 import GameCard from "./GameCard";

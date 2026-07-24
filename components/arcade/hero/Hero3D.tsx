@@ -103,6 +103,7 @@ export default function Hero3D() {
 
       {/* Side Glows */}
       <div className="absolute top-1/4 left-0 w-64 h-64 bg-cyan/10 rounded-full blur-[100px] pointer-events-none" />
+      
       <div className="absolute bottom-1/4 right-0 w-64 h-64 bg-pink/10 rounded-full blur-[100px] pointer-events-none" />
     </section>
   );

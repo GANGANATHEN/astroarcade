@@ -4,6 +4,7 @@
 import { useEffect, useRef } from "react";
 
 export default function ParticleEffect() {
+  
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {

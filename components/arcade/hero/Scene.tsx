@@ -1,6 +1,5 @@
 // components/home/Scene.tsx
 "use client";
-
 import { Suspense } from "react";
 import { Environment, Stars, ContactShadows } from "@react-three/drei";
 import FloatingShapes from "./FloatingShapes";

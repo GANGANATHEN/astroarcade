@@ -1,6 +1,5 @@
 // components/home/StatsBar.tsx
 "use client";
-
 import { Gamepad2, Users, Trophy, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -51,7 +50,7 @@ interface Props {
 }
 
 export default function StatsBar({ loaded }: Props) {
-  
+
   const stats = [
     { icon: <Gamepad2 className="w-4 h-4 text-cyan" />, value: "6", label: "Games", delay: 300 },
     { icon: <Users className="w-4 h-4 text-pink" />, value: "28", label: "Players", delay: 450 },

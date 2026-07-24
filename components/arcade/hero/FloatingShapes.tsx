@@ -40,6 +40,7 @@ function FloatingShape({
 }
 
 export default function FloatingShapes() {
+  
   const groupRef = useRef<THREE.Group>(null);
   const mouseRef = useRef({ x: 0, y: 0 });
 
