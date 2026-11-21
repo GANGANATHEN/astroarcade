@@ -1,7 +1,8 @@
 import mongoose from "mongoose";
 
 const MONGODB_URI =
-  `mongodb+srv://Arcade:sha2@cluster0.xdsfkyt.mongodb.net/?appName=Cluster0`;
+  process.env.MONGODB_URI ||
+  "mongodb+srv://<username>:<password>@cluster0.example.mongodb.net/?appName=Cluster0";
 
 async function testConnection() {
   try {

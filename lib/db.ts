@@ -14,9 +14,7 @@ if (!cached) {
   cached = global.mongoose = { conn: null, promise: null };
 }
 
-cached.promise = mongoose.connect(
-  "mongodb+srv://Arcade:sha2@cluster0.xdsfkyt.mongodb.net/astroarcade?retryWrites=true&w=majority",
-);
+cached.promise = mongoose.connect(MONGODB_URI);
 
 export async function connectDB() {
   if (cached.conn) return cached.conn;
